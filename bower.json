@@ -16,6 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "skrollr": "~0.6.29"
   }
 }

@@ -7,12 +7,11 @@
 body {
     background-color: #ccc;
     text-align: center;
-/*    overflow: hidden;*/
 }
 
 .field {
-    font-size: 160px;
-    width: 100%;/* normally for a height of 6em it should be 8em*/
+    font-size: 80px;
+    width: 8em;
     height: 6em;
     background: green;
     background-image: linear-gradient(transparent 50%, rgba(255,255,255,.25) 50%);
@@ -27,23 +26,22 @@ body {
 }
 
 .box {
-    width: 55%;/*4.4em;*/
+    width: 4.4em;
     height: 1.8em;
     margin: 0 auto;
     border-top: none;
 }
 
 .goal-area {
-    width: 45.45%;/*2em;*/
+    width: 2em;
     height: 0.6em;
     margin: 0 auto;
     border-top: none;
 }
 
 .center-circle {
-    width: 25%;/*2em;*/
+    width: 2em;
     height: 2em;
     border-radius: 50%;
-    /*margin: calc(60% - 1em) auto; */
     margin: 3.1em auto;
 }
