@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles/veld.css">
+  <link rel="stylesheet" href="styles/field.css">
 </head>
 <body>
-    <div class="veld kalk"
+    <div class="field chalk"
          data-top="transform:perspective(5em) rotateX(0deg);"
          data-bottom="transform:perspective(4em) rotateX(60deg);">
-        <div class="grote-baklijn kalk">
-            <div class="kleine-baklijn kalk"></div>
+        <div class="box chalk">
+            <div class="goal-area chalk"></div>
         </div>
-        <div class="midden-cirkel kalk"></div>
+        <div class="center-circle chalk"></div>
     </div>
-    <script src="lib/skrollr.js"></script>
+    <script src="bower_components/skrollr/dist/skrollr.min.js"></script>
     <script>
         skrollr.init({
         });

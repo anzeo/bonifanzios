@@ -5,13 +5,13 @@
 }
 
 body {
-    font-size: 160px;
     background-color: #ccc;
     text-align: center;
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
-.veld {
+.field {
+    font-size: 160px;
     width: 100%;/* normally for a height of 6em it should be 8em*/
     height: 6em;
     background: green;
@@ -22,25 +22,25 @@ body {
     position: fixed;
 }
 
-.kalk {
+.chalk {
     border: 0.05em solid rgba(255,255,255,0.90);
 }
 
-.grote-baklijn {
+.box {
     width: 55%;/*4.4em;*/
     height: 1.8em;
     margin: 0 auto;
     border-top: none;
 }
 
-.kleine-baklijn {
+.goal-area {
     width: 45.45%;/*2em;*/
     height: 0.6em;
     margin: 0 auto;
     border-top: none;
 }
 
-.midden-cirkel {
+.center-circle {
     width: 25%;/*2em;*/
     height: 2em;
     border-radius: 50%;

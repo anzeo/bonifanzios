@@ -1,0 +1,21 @@
+{
+  "name": "bonifanzios",
+  "version": "0.0.0",
+  "homepage": "https://github.com/anzeo/bonifanzios",
+  "authors": [
+    "anzeo <zebigbozz@gmail.com>"
+  ],
+  "description": "Sporting Bonifanzios home page",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skrollr": "~0.6.29"
+  }
+}
