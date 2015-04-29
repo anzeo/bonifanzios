@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+}
+
+.sbf-navigation .md-button {
+	border-radius: 0;
+}
+
+.sbf-navigation .md-button.active {
+	background-color: darkblue;
+}
+
+.sbf-navigation .md-button:not([disabled]):hover, .sbf-navigation .md-button:focus  {
+	background-color: darkblue;
+}

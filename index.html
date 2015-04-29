@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="styles/style.css">
+<head> 
+  <link rel="stylesheet" href="styles/app.css">
   <link rel="stylesheet" href="src/field/styles/field.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
 </head>
-<body ng-app="sbf">
-    <header>
-        <h1>Sporting Bonifanzios</h1>
-        <h3>Scroll down!</h3>
-    </header>
-    
-    <field></field>
-    
+<body ng-app="sbf" layout="column" layout-fill>
+    <md-toolbar layout="row" layout-sm="column" class="sbf-navigation">
+        <h2 ui-sref="home">Sporting Bonifanzios</h2>
+        <md-button ui-sref="home" ui-sref-active="active">Spelers</md-button>
+        <md-button ui-sref="games" ui-sref-active="active">Wedstrijden</md-button>
+    </md-toolbar>
+    <md-content>
+        <field></field>
+    <md-content>
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>            
+    <script src="bower_components/angular-aria/angular-aria.js"></script>            
+    <script src="bower_components/angular-material/angular-material.js"></script>            
     <script src="src/app.js"></script>
     <script src="src/field/module.js"></script>
     <script src="src/field/scripts/field.js"></script>
