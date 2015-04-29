@@ -5,8 +5,18 @@
 }
 
 body {
-    background-color: #ccc;
+    background-color: darkslategray;
+    color: aliceblue;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px black;
     text-align: center;
+    font-family: sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index:1;
 }
 
 .field {
@@ -18,7 +28,6 @@ body {
     background-size: 100% 1em;
     overflow: hidden;
     margin: 0 auto;
-    position: fixed;
 }
 
 .chalk {

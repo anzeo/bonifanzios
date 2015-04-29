@@ -1,40 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/field.css">
 </head>
 <body>
-    data-top="transform:perspective(5em) rotateX(0deg);"
-    data-bottom="transform:perspective(4em) rotateX(60deg);"
-        <div class="field chalk">
-            <div class="box chalk">
-                <div class="goal-area chalk"></div>
-            </div>
-            <div class="center-circle chalk"></div>
+    <header>
+        <h1>Sporting Bonifanzios</h1>
+        <h3>Scroll down!</h3>
+    </header>
+    <div class="field chalk">
+        <div class="box chalk">
+            <div class="goal-area chalk"></div>
         </div>
-    
-<!--    <script src="bower_components/skrollr/dist/skrollr.min.js"></script>-->
-    <script>
-        
-        window.onload = function() {
-
-            var field = document.querySelector(".field");
-            
-            document.addEventListener("mousewheel", onMouseWheelEvent, false);
-            document.addEventListener("DOMMouseScroll", onMouseWheelEvent, false);
-            
-
-            function onMouseWheelEvent(event) {
-
-                // cross-browser wheel delta
-                var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-                console.log(delta, (event.wheelDelta || -event.detail));
-                //sq.e.style.width = Math.max(sq.zoom, Math.min(sq.nw, sq.e.width + (sq.zoom * delta))) + "px";
-
-                return false;
-            }
-
-        }
-    </script>
+        <div class="center-circle chalk"></div>
+    </div>    
+    <script src="src/scrolling-field.js"></script>
 </body>
 </html>
