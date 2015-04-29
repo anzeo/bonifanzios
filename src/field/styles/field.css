@@ -1,24 +1,6 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0px;
+field {
+    display: block;
 }
-
-body {
-    background-color: darkslategray;
-    color: aliceblue;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 5px black;
-    text-align: center;
-    font-family: sans-serif;
-}
-
-header {
-    position: fixed;
-    width: 100%;
-    z-index:1;
-}
-
 .field {
     font-size: 80px;
     width: 8em;

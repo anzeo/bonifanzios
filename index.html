@@ -2,19 +2,20 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/field.css">
+  <link rel="stylesheet" href="src/field/styles/field.css">
 </head>
-<body>
+<body ng-app="sbf">
     <header>
         <h1>Sporting Bonifanzios</h1>
         <h3>Scroll down!</h3>
     </header>
-    <div class="field chalk">
-        <div class="box chalk">
-            <div class="goal-area chalk"></div>
-        </div>
-        <div class="center-circle chalk"></div>
-    </div>    
-    <script src="src/scrolling-field.js"></script>
+    
+    <field></field>
+    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/field/module.js"></script>
+    <script src="src/field/scripts/field.js"></script>
 </body>
 </html>

@@ -1,0 +1,1 @@
+angular.module("sbf", ["ui.router", "sbf.field"]);
