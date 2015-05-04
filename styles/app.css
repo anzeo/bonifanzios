@@ -1,0 +1,12 @@
+.game-win {
+	text-align: center;
+}
+
+.game-win i {
+	color: white;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	background-color: gold;
+	border-radius: 50%;
+}

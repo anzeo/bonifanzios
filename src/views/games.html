@@ -1,9 +1,14 @@
 <h1>Wedstrijden</h1>
-<ul>
-	<li ng-repeat="game in GamesController.games">
-		<i class="fa fa-trophy" ng-if="GamesController.isGameAWin(game)"></i>
-	    <span class="md-list-item-text md-offset">
-	      	{{game.homeTeam.name}} {{game.homeTeam.score}} - {{game.awayTeam.score}} {{game.awayTeam.name}}
-	    </span>
-	</li>
-</ul>
+<md-list>
+	<md-list-item ng-repeat="game in GamesController.games">
+	    <h3>{{game.date|date}}</h3>
+	    <div layout="row" layout-align="start center">
+		    <div flex="5" class="game-win">
+		    	<i class="fa fa-trophy" ng-if="GamesController.isGameAWin(game)"></i>
+		    </div>
+		    <div>
+		      	{{game.homeTeam.name}} {{game.homeTeam.score}} - {{game.awayTeam.score}} {{game.awayTeam.name}}
+		    </div>
+	    </div>
+	</md-list-item>
+</md-list>
