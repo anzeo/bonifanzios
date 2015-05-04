@@ -4,15 +4,14 @@
   <link rel="stylesheet" href="styles/app.css">
   <link rel="stylesheet" href="src/field/styles/field.css">
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 </head>
-<body ng-app="sbf" layout="column" layout-fill>
-    <md-toolbar layout="row" layout-sm="column" class="sbf-navigation">
-        <h2 ui-sref="home">Sporting Bonifanzios</h2>
-        <md-button ui-sref="home" ui-sref-active="active">Spelers</md-button>
-        <md-button ui-sref="games" ui-sref-active="active">Wedstrijden</md-button>
-    </md-toolbar>
-    <md-content>
-        <field></field>
+<body ng-app="sbf" layout-fill>
+    <md-button ui-sref="players" ui-sref-active="active">Spelers</md-button>
+    <md-button ui-sref="games" ui-sref-active="active">Wedstrijden</md-button>
+  
+    <md-content layout-padding>
+        <ui-view></ui-view>
     <md-content>
 
     <script src="bower_components/angular/angular.js"></script>
@@ -23,5 +22,6 @@
     <script src="src/app.js"></script>
     <script src="src/field/module.js"></script>
     <script src="src/field/scripts/field.js"></script>
+    <script src="src/controllers/GamesController.js"></script>
 </body>
 </html>
