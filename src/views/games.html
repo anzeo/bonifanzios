@@ -6,9 +6,11 @@
 		    <div flex="5" class="game-win">
 		    	<i class="fa fa-trophy" ng-if="GamesController.isGameAWin(game)"></i>
 		    </div>
-		    <div>
-		      	{{game.homeTeam.name}} {{game.homeTeam.score}} - {{game.awayTeam.score}} {{game.awayTeam.name}}
-		    </div>
+			<div flex="40" class="game-team left">{{game.homeTeam.name}}</div>
+			<div flex="5" class="game-score">{{game.homeTeam.score}}</div>
+			<div flex="5" class="game-vs">-</div>
+			<div flex="5" class="game-score">{{game.awayTeam.score}}</div>
+			<div flex="40" class="game-team">{{game.awayTeam.name}}</div>
 	    </div>
 	</md-list-item>
 </md-list>
