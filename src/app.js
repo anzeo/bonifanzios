@@ -2,10 +2,10 @@ angular.module("sbf", ["ngMaterial", "ui.router", "sbf.field"], function($stateP
 	$stateProvider.state("players", {
 		url: "",
 		templateUrl: "src/views/players.html"
-	}).state("games", {
-		url: "/games",
-		controller: "GamesController",
-		controllerAs: "GamesController",
-		templateUrl: "src/views/games.html"
+	}).state("scores", {
+		url: "/scores",
+		controller: "ScoresController",
+		controllerAs: "vm",
+		templateUrl: "src/views/scores.html"
 	})
 });

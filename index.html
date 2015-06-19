@@ -8,7 +8,7 @@
 </head>
 <body ng-app="sbf" layout-fill>
     <md-button ui-sref="players" ui-sref-active="active">Spelers</md-button>
-    <md-button ui-sref="games" ui-sref-active="active">Wedstrijden</md-button>
+    <md-button ui-sref="scores" ui-sref-active="active">Uitslagen</md-button>
   
     <md-content layout-padding>
         <ui-view></ui-view>
@@ -22,6 +22,7 @@
     <script src="src/app.js"></script>
     <script src="src/field/module.js"></script>
     <script src="src/field/scripts/field.js"></script>
-    <script src="src/controllers/GamesController.js"></script>
+    <script src="src/controllers/ScoresController.js"></script>
+    <script src="src/services/ScoresService.js"></script>
 </body>
 </html>

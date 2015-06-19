@@ -1,0 +1,16 @@
+<h1>Wedstrijden</h1>
+<md-list>
+	<md-list-item ng-repeat="score in vm.scores">
+	    <h3>{{score.date|date}}</h3>
+	    <div layout="row" layout-align="start center">
+		    <div flex="5" class="game-win">
+		    	<i class="fa fa-trophy" ng-if="score.isWin"></i>
+		    </div>
+			<div flex="40" class="game-team left">{{score.homeTeam}}</div>
+			<div flex="5" class="game-score">{{score.homeScore}}</div>
+			<div flex="5" class="game-vs">-</div>
+			<div flex="5" class="game-score">{{score.awayScore}}</div>
+			<div flex="40" class="game-team">{{score.awayTeam}}</div>
+	    </div>
+	</md-list-item>
+</md-list>
