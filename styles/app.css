@@ -2,6 +2,13 @@ h1 {
 	text-transform: uppercase;
 }
 
+.nav a {
+	width: 100%;
+	margin: 5px 0;
+	text-align: left;
+	padding-left: 1em;
+}
+
 .scores {
 	line-height: 2em;
 }
