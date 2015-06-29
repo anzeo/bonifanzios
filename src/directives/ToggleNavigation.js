@@ -1,14 +1,20 @@
 angular.module('sbf').directive("toggleNavigation", function($mdSidenav){
     return {
-        restrict: 'E',
-        templateUrl: 'src/views/ToggleNavigation.html',
-        link: function(scope, element, attrs){
-            var id = attrs['mdComponentId'];
+        restrict: 'A',
+        scope: {
+            id: '@toggleNavigation'
+        },
+        link: function(scope, element){
+            scope.$on('$destroy', onDestroy);
 
-            scope.toggle = toggleNavigation;
+            element[0].addEventListener('click', toggleNavigation);
 
             function toggleNavigation(){
-                $mdSidenav(id).toggle();
+                $mdSidenav(scope.id).toggle();
+            }
+
+            function onDestroy(){
+                element[0].removeEventListener('click');
             }
         }
     };
