@@ -1,51 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head> 
-  <link rel="stylesheet" href="styles/app.css">
-  <link rel="stylesheet" href="src/field/styles/field.css">
-  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+<html ng-app="sbf">
+<head>
+    <title>Sporting Bonifanzios</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="src/field/styles/field.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 </head>
-<body ng-app="sbf" layout-fill>
+<body layout-fill>
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" toggle-navigation="left">
+            <span class="fa fa-th-list"></span>
+        </md-button>
+        <h1>{{$state.current.data.title}}</h1>
+    </div>
+</md-toolbar>
+<md-sidenav md-component-id="left" class="md-sidenav-left" layout="column">
     <md-toolbar>
-        <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" toggle-navigation="left">
-                <span class="fa fa-th-list"></span>
-            </md-button>
-
-        </div>
+        <h1 layout-padding>Sporting Bonifanzios</h1>
     </md-toolbar>
-    <md-sidenav md-component-id="left" class="md-sidenav-left" layout="column" layout-fill>
-        <md-toolbar>
-            Sporting Bonifanzios
-        </md-toolbar>
-        <md-button ui-sref="players" ui-sref-active="active" toggle-navigation="left">
-            <i class="fa fa-users"></i>
-            Spelers
-        </md-button>
-        <md-button ui-sref="scores" ui-sref-active="active" toggle-navigation="left">
-            <i class="fa fa-bar-chart"></i>
-            Uitslagen
-        </md-button>
-        <md-button ui-sref="store" ui-sref-active="active" ng-disabled="true" toggle-navigation="left">
-            <i class="fa fa-shopping-cart"></i>
-            Merchandise
-        </md-button>
-    </md-sidenav>
-    <md-content layout-padding>
-        <ui-view></ui-view>
+    <md-button ui-sref="players" ui-sref-active="active" toggle-navigation="left">
+        <i class="fa fa-users"></i>
+        Spelers
+    </md-button>
+    <md-button ui-sref="scores" ui-sref-active="active" toggle-navigation="left">
+        <i class="fa fa-bar-chart"></i>
+        Uitslagen
+    </md-button>
+    <md-button ui-sref="store" ui-sref-active="active" ng-disabled="true" toggle-navigation="left">
+        <i class="fa fa-shopping-cart"></i>
+        Merchandise
+    </md-button>
+</md-sidenav>
+<md-content layout-padding>
+    <ui-view></ui-view>
     <md-content>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>            
-    <script src="bower_components/angular-aria/angular-aria.js"></script>            
-    <script src="bower_components/angular-material/angular-material.js"></script>            
-    <script src="src/app.js"></script>
-    <script src="src/field/module.js"></script>
-    <script src="src/field/scripts/field.js"></script>
-    <script src="src/controllers/ScoresController.js"></script>
-    <script src="src/services/ScoresService.js"></script>
-    <script src="src/directives/ToggleNavigation.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-material/angular-material.js"></script>
+        <script src="src/app.js"></script>
+        <script src="src/field/module.js"></script>
+        <script src="src/field/scripts/field.js"></script>
+        <script src="src/controllers/ScoresController.js"></script>
+        <script src="src/services/ScoresService.js"></script>
+        <script src="src/directives/ToggleNavigation.js"></script>
 </body>
 </html>
