@@ -11,10 +11,13 @@ h1 {
 
 .player-card {
 	width: 400px;
-	height: 600px;
 	display: inline-block;
 	overflow: hidden;
 	margin: 1em;
+}
+
+.player-card h1 {
+	margin: 0;
 }
 
 .scores {
