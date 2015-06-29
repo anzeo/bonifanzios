@@ -1,6 +1,8 @@
 angular.module("sbf", ["ngMaterial", "ui.router"], function($stateProvider, $urlRouterProvider){
 	$stateProvider.state("players", {
 		url: "/players",
+		controller: "PlayersController",
+		controllerAs: "vm",
 		templateUrl: "src/views/players.html",
 		data: {
 			title: 'Spelers'

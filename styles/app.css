@@ -9,6 +9,14 @@ h1 {
 	padding-left: 1em;
 }
 
+.player-card {
+	width: 400px;
+	height: 600px;
+	display: inline-block;
+	overflow: hidden;
+	margin: 1em;
+}
+
 .scores {
 	line-height: 2em;
 }
