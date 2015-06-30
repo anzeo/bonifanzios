@@ -1,4 +1,4 @@
-angular.module("sbf").service("ScoresService", function($http){
+angular.module("sbf").service("ScoresService", function($http, ResponseParserFactory){
     var scheme = {
         'gsx$awayteam': {name:'awayTeam'},
         'gsx$awayscore': {name:'awayScore'},
@@ -7,31 +7,14 @@ angular.module("sbf").service("ScoresService", function($http){
         'gsx$date': {name:'date'},
         'gsx$iswin': {name:'isWin', map: parseBoolean}
     };
+    var responseParser = ResponseParserFactory.getResponseParser(scheme);
 
     return {
         getScores: getScores
     };
 
     function getScores(){
-        return $http.get("https://spreadsheets.google.com/feeds/list/14Oj8Lzkfldel7-QPXtUigVDIgGpjDx5T5YSxXiV62hM/od6/public/values?alt=json").then(parseResponse);
-    }
-
-    function parseResponse(response){
-        var parsedData = [];
-        response.data.feed.entry.forEach(function(entry){
-            parsedData.push(parseEntry(entry));
-        });
-        return parsedData;
-    }
-
-    function parseEntry(entry){
-        var parsedEntry = {};
-        for(var property in entry){
-            if(scheme[property]){
-                parsedEntry[scheme[property].name] = scheme[property].map ? scheme[property].map(entry[property].$t) : entry[property].$t;
-            }
-        }
-        return parsedEntry;
+        return $http.get("https://spreadsheets.google.com/feeds/list/14Oj8Lzkfldel7-QPXtUigVDIgGpjDx5T5YSxXiV62hM/od6/public/values?alt=json").then(responseParser);
     }
 
     function parseBoolean(string){
