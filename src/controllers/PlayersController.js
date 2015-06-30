@@ -1,6 +1,7 @@
-angular.module("sbf").controller("PlayersController", function(){
+angular.module("sbf").controller("PlayersController", function(PlayersService){
     var controller = this;
-    controller.players = [
-        "George", "Louis", "Rinaldo","Albert", "John", "Eric"
-    ]
+
+    PlayersService.getPlayers().then(function(data){
+       controller.players = data;
+    });
 });
