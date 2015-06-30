@@ -9,30 +9,27 @@
 </head>
 <body layout-fill>
 <md-toolbar>
-    <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" toggle-navigation="left">
-            <span class="fa fa-th-list"></span>
-        </md-button>
-        <h1>{{$state.current.data.title}}</h1>
+    <div class="md-toolbar-tools" ng-controller="NavigationController">
+        <h1>Sporting Bonifanzios</h1>
+        <md-tabs md-selected="vm.selectedTabIndex">
+            <md-tab ui-sref="players" ui-sref-active="md-active">
+                <md-tab-label>
+                    <i class="fa fa-users"></i> Spelers
+                </md-tab-label>
+            </md-tab>
+            <md-tab ui-sref="scores" ui-sref-active="md-active">
+                <md-tab-label>
+                    <i class="fa fa-bar-chart"></i> Uitslagen
+                </md-tab-label>
+            </md-tab>
+            <md-tab ui-sref="store" ui-sref-active="md-active" ng-disabled="true">
+                <md-tab-label>
+                    <i class="fa fa-shopping-cart"></i> Merchandise
+                </md-tab-label>
+            </md-tab>
+        </md-tabs>
     </div>
 </md-toolbar>
-<md-sidenav md-component-id="left" class="md-sidenav-left nav" layout="column">
-    <md-toolbar>
-        <h1 layout-padding>Sporting Bonifanzios</h1>
-    </md-toolbar>
-    <md-button ui-sref="players" ui-sref-active="active" toggle-navigation="left" layout-fill>
-        <i class="fa fa-users"></i>
-        Spelers
-    </md-button>
-    <md-button ui-sref="scores" ui-sref-active="active" toggle-navigation="left">
-        <i class="fa fa-bar-chart"></i>
-        Uitslagen
-    </md-button>
-    <md-button ui-sref="store" ui-sref-active="active" ng-disabled="true" toggle-navigation="left">
-        <i class="fa fa-shopping-cart"></i>
-        Merchandise
-    </md-button>
-</md-sidenav>
 <md-content layout-padding>
     <ui-view></ui-view>
     <md-content>
@@ -45,9 +42,9 @@
         <script src="src/app.js"></script>
         <script src="src/field/module.js"></script>
         <script src="src/field/scripts/field.js"></script>
+        <script src="src/controllers/NavigationController.js"></script>
         <script src="src/controllers/ScoresController.js"></script>
         <script src="src/controllers/PlayersController.js"></script>
         <script src="src/services/ScoresService.js"></script>
-        <script src="src/directives/ToggleNavigation.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ angular.module("sbf", ["ngMaterial", "ui.router"], function($stateProvider, $url
 		controllerAs: "vm",
 		templateUrl: "src/views/players.html",
 		data: {
-			title: 'Spelers'
+			tabIndex: 0
 		}
 	}).state("scores", {
 		url: "/scores",
@@ -13,11 +13,9 @@ angular.module("sbf", ["ngMaterial", "ui.router"], function($stateProvider, $url
 		controllerAs: "vm",
 		templateUrl: "src/views/scores.html",
 		data: {
-			title: 'Uitslagen'
+			tabIndex: 1
 		}
 	});
 
-	$urlRouterProvider.when("/", "/players");
-}).run(function($rootScope, $state){
-	$rootScope.$state = $state;
+	$urlRouterProvider.otherwise("/players");
 });
