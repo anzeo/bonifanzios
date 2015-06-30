@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 </head>
 <body layout-fill>
-<md-toolbar>
-    <div class="md-toolbar-tools" ng-controller="NavigationController">
-        <h1>Sporting Bonifanzios</h1>
-        <md-tabs md-selected="vm.selectedTabIndex">
-            <md-tab ui-sref="players" ui-sref-active="md-active">
+    <md-toolbar ng-controller="NavigationController as vm">
+        <div class="md-toolbar-tools">
+            <h1>Sporting Bonifanzios</h1>
+        <md-tabs md-selected="vm.selectedTabIndex" class="md-primary">
+            <md-tab ui-sref="players">
                 <md-tab-label>
                     <i class="fa fa-users"></i> Spelers
                 </md-tab-label>
             </md-tab>
-            <md-tab ui-sref="scores" ui-sref-active="md-active">
+            <md-tab ui-sref="scores">
                 <md-tab-label>
                     <i class="fa fa-bar-chart"></i> Uitslagen
                 </md-tab-label>
             </md-tab>
-            <md-tab ui-sref="store" ui-sref-active="md-active" ng-disabled="true">
+            <md-tab ui-sref="store" ng-disabled="true">
                 <md-tab-label>
                     <i class="fa fa-shopping-cart"></i> Merchandise
                 </md-tab-label>
             </md-tab>
         </md-tabs>
-    </div>
-</md-toolbar>
+        </div>
+    </md-toolbar>
 <md-content layout-padding>
     <ui-view></ui-view>
     <md-content>
