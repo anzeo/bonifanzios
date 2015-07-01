@@ -2,6 +2,16 @@ h1 {
 	text-transform: uppercase;
 }
 
+#banner {
+	height: 300px;
+	background-color: navy;
+	color: white;
+	background: url("../images/banner.jpg") no-repeat center;
+}
+#banner h1 {
+	margin-left: 1em;
+}
+
 .player-card {
 	width: 400px;
 	display: inline-block;

@@ -7,29 +7,27 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 </head>
-<body layout-fill>
-    <md-toolbar ng-controller="NavigationController as vm">
-        <div class="md-toolbar-tools">
-            <h1>Sporting Bonifanzios</h1>
-        <md-tabs md-selected="vm.selectedTabIndex" class="md-primary">
-            <md-tab ui-sref="players">
-                <md-tab-label>
-                    <i class="fa fa-users"></i> Spelers
-                </md-tab-label>
-            </md-tab>
-            <md-tab ui-sref="scores">
-                <md-tab-label>
-                    <i class="fa fa-bar-chart"></i> Uitslagen
-                </md-tab-label>
-            </md-tab>
-            <md-tab ui-sref="store" ng-disabled="true">
-                <md-tab-label>
-                    <i class="fa fa-shopping-cart"></i> Merchandise
-                </md-tab-label>
-            </md-tab>
-        </md-tabs>
-        </div>
-    </md-toolbar>
+<body layout-fill ng-controller="NavigationController as vm">
+<div id="banner" layout="row" layout-align="start end">
+    <h1>Sporting Bonifanzios</h1>
+</div>
+<md-tabs md-selected="vm.selectedTabIndex">
+    <md-tab ui-sref="players">
+        <md-tab-label>
+            <i class="fa fa-users"></i> Spelers
+        </md-tab-label>
+    </md-tab>
+    <md-tab ui-sref="scores">
+        <md-tab-label>
+            <i class="fa fa-bar-chart"></i> Uitslagen
+        </md-tab-label>
+    </md-tab>
+    <md-tab ui-sref="store" ng-disabled="true">
+        <md-tab-label>
+            <i class="fa fa-shopping-cart"></i> Merchandise
+        </md-tab-label>
+    </md-tab>
+</md-tabs>
 <md-content layout-padding>
     <ui-view></ui-view>
     <md-content>
