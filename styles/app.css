@@ -4,9 +4,8 @@ h1 {
 
 #banner {
 	height: 300px;
-	background-color: navy;
 	color: white;
-	background: url("../images/banner.jpg") no-repeat center;
+	background: rgb(63,81,181);
 }
 #banner h1 {
 	margin-left: 1em;
@@ -28,6 +27,11 @@ h1 {
 	line-height: 2em;
 }
 
+.scores .game:nth-child(even) {
+	background-color: rgba(63,81,181, 1);
+	color: white;
+}
+
 .game-win {
 	text-align: center;
 }
@@ -37,7 +41,7 @@ h1 {
 	width: 2em;
 	height: 2em;
 	line-height: 2em;
-	background-color: gold;
+	background-color: rgb(255, 64, 129);
 	border-radius: 50%;
 }
 
